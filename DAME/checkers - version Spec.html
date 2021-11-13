@@ -1,0 +1,362 @@
+<html>
+<body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Guillaume DAVID - Jeu de Dames</title>
+  <link rel="stylesheet" href="css/checkers.css">
+  <link rel="stylesheet" href="lib/jasmine-3.10.1/jasmine.css">
+
+  <script src="lib/jasmine-3.10.1/jasmine.js"></script>
+  <script src="lib/jasmine-3.10.1/jasmine-html.js"></script>
+  <script src="lib/jasmine-3.10.1/boot0.js"></script>
+  <!-- optional: include a file here that configures the Jasmine env -->
+  <script src="lib/jasmine-3.10.1/boot1.js"></script>
+
+
+</head>
+
+<div class="content">
+
+<div>
+<div id="lap"></div>
+<div id="win"></div>
+</div>
+
+
+<div Class="game">
+
+  <div class="A_line">
+<div class="white case" id="A1">
+</div>
+
+<div class="black case" id="A2"><div class="pawn__White" id="PW6"></div>
+</div>
+
+<div class="white case" id="A3">
+</div>
+
+<div class="black case" id="A4"><div class="pawn__White" id="PW16"></div>
+</div>
+
+<div class="white case" id="A5">
+</div>
+
+<div class="black case" id="A6">
+</div>
+
+<div class="white case" id="A7">
+</div>
+
+<div class="black case" id="A8"><div class="pawn__Black" id="PB15"></div>
+</div>
+
+<div class="white case" id="A9">
+</div>
+
+<div class="black case" id="A10"><div class="pawn__Black" id="PB1"></div>
+</div>
+  </div>
+
+  <div class="B_line">
+<div class="black case" id="B1"><div class="pawn__White" id="PW1"></div>
+</div>
+
+<div class="white case" id="B2">
+</div>
+
+<div class="black case" id="B3"><div class="pawn__White" id="PW15"></div>
+</div>
+
+<div class="white case" id="B4">
+</div>
+
+<div class="black case" id="B5">
+</div>
+
+<div class="white case" id="B6">
+</div>
+
+<div class="black case" id="B7"><div class="pawn__Black" id="PB16"></div>
+</div>
+
+<div class="white case" id="B8">
+</div>
+
+<div class="black case" id="B9"><div class="pawn__Black" id="PB6"></div>
+</div>
+
+<div class="white case" id="B10">
+</div>
+  </div>
+
+  <div class="C_line">
+<div class="white case" id="C1">
+</div>
+
+<div class="black case" id="C2"><div class="pawn__White" id="PW7"></div>
+</div>
+
+<div class="white case" id="C3">
+</div>
+
+<div class="black case" id="C4"><div class="pawn__White" id="PW17"></div>
+</div>
+
+<div class="white case" id="C5">
+</div>
+
+<div class="black case" id="C6">
+</div>
+
+<div class="white case" id="C7">
+</div>
+
+<div class="black case" id="C8"><div class="pawn__Black" id="PB14"></div>
+</div>
+
+<div class="white case" id="C9">
+</div>
+
+<div class="black case" id="C10"><div class="pawn__Black" id="PB2"></div>
+</div>
+  </div>
+
+  <div class="D_line">
+<div class="black case" id="D1"><div class="pawn__White" id="PW2"></div>
+</div>
+
+<div class="white case" id="D2">
+</div>
+
+<div class="black case" id="D3"><div class="pawn__White" id="PW14"></div>
+</div>
+
+<div class="white case" id="D4">
+</div>
+
+<div class="black case" id="D5">
+</div>
+
+<div class="white case" id="D6">
+</div>
+
+<div class="black case" id="D7"><div class="pawn__Black" id="PB17"></div>
+</div>
+
+<div class="white case" id="D8">
+</div>
+
+<div class="black case" id="D9"><div class="pawn__Black" id="PB7"></div>
+</div>
+
+<div class="white case" id="D10">
+</div>
+  </div>
+
+  <div class="E_line">
+<div class="white case" id="E1">
+</div>
+
+<div class="black case" id="E2"><div class="pawn__White" id="PW8"></div>
+</div>
+
+<div class="white case" id="E3">
+</div>
+
+<div class="black case" id="E4"><div class="pawn__White" id="PW18"></div>
+</div>
+
+<div class="white case" id="E5">
+</div>
+
+<div class="black case" id="E6">
+</div>
+
+<div class="white case" id="E7">
+</div>
+
+<div class="black case" id="E8"><div class="pawn__Black" id="PB13"></div>
+</div>
+
+<div class="white case" id="E9">
+</div>
+
+<div class="black case" id="E10"><div class="pawn__Black" id="PB3"></div>
+</div>
+  </div>
+
+  <div class="F_line">
+<div class="black case" id="F1"><div class="pawn__White" id="PW3"></div>
+</div>
+
+<div class="white case" id="F2">
+</div>
+
+<div class="black case" id="F3"><div class="pawn__White" id="PW13"></div>
+</div>
+
+<div class="white case" id="F4">
+</div>
+
+<div class="black case" id="F5">
+</div>
+
+<div class="white case" id="F6">
+</div>
+
+<div class="black case" id="F7"><div class="pawn__Black" id="PB18"></div>
+</div>
+
+<div class="white case" id="F8">
+</div>
+
+<div class="black case" id="F9"><div class="pawn__Black" id="PB8"></div>
+</div>
+
+<div class="white case" id="F10">
+</div>
+  </div>
+
+  <div class="G_line">
+<div class="white case" id="G1">
+</div>
+
+<div class="black case" id="G2"><div class="pawn__White" id="PW9"></div>
+</div>
+
+<div class="white case" id="G3">
+</div>
+
+<div class="black case" id="G4"><div class="pawn__White" id="PW19"></div>
+</div>
+
+<div class="white case" id="G5">
+</div>
+
+<div class="black case" id="G6">
+</div>
+
+<div class="white case" id="G7">
+</div>
+
+<div class="black case" id="G8"><div class="pawn__Black" id="PB12"></div>
+</div>
+
+<div class="white case" id="G9">
+</div>
+
+<div class="black case" id="G10"><div class="pawn__Black" id="PB4"></div>
+</div>
+  </div>
+
+  <div class="H_line">
+  <div class="black case" id="H1"><div class="pawn__White" id="PW4"></div>
+  </div>
+
+  <div class="white case" id="H2">
+  </div>
+
+  <div class="black case" id="H3"><div class="pawn__White" id="PW12"></div>
+  </div>
+
+  <div class="white case" id="H4">
+  </div>
+
+  <div class="black case" id="H5">
+  </div>
+
+  <div class="white case" id="H6">
+  </div>
+
+  <div class="black case" id="H7"><div class="pawn__Black" id="PB19"></div>
+  </div>
+
+  <div class="white case" id="H8">
+  </div>
+
+  <div class="black case" id="H9"><div class="pawn__Black" id="PB9"></div>
+  </div>
+
+  <div class="white case" id="H10">
+  </div>
+  </div>
+
+  <div class="I_line">
+<div class="white case" id="I1">
+</div>
+
+<div class="black case" id="I2"><div class="pawn__White" id="PW10"></div>
+</div>
+
+<div class="white case" id="I3">
+</div>
+
+<div class="black case" id="I4"><div class="pawn__White" id="PW20"></div>
+</div>
+
+<div class="white case" id="I5">
+</div>
+
+<div class="black case" id="I6">
+</div>
+
+<div class="white case" id="I7">
+</div>
+
+<div class="black case" id="I8"><div class="pawn__Black" id="PB11"></div>
+</div>
+
+<div class="white case" id="I9">
+</div>
+
+<div class="black case" id="I10"><div class="pawn__Black" id="PB5"></div>
+</div>
+  </div>
+
+  <div class="J_line">
+<div class="black case" id="J1"><div class="pawn__White" id="PW5"></div>
+</div>
+
+<div class="white case" id="J2">
+</div>
+
+<div class="black case" id="J3"><div class="pawn__White" id="PW11"></div>
+</div>
+
+<div class="white case" id="J4">
+</div>
+
+<div class="black case" id="J5">
+</div>
+
+<div class="white case" id="J6">
+</div>
+
+<div class="black case" id="J7"><div class="pawn__Black" id="PB20"></div>
+</div>
+
+<div class="white case" id="J8">
+</div>
+
+<div class="black case" id="J9"><div class="pawn__Black" id="PB10"></div>
+</div>
+
+<div class="white case" id="J10">
+</div>
+  </div>
+
+</div>
+
+
+</div>
+
+<script src="src/CheckersFunctions.js"></script>
+<script type="text/javascript" src="src/Checkers.js"></script>
+
+<!-- include spec files here... -->
+<script src="spec/CheckersSpec.js"></script>
+
+</body>
+</html>

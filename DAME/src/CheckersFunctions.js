@@ -199,7 +199,7 @@ function chooseCase(id, i1, i2, c1, c2){
         document.getElementById(selected).parentNode.id == 'C10' || document.getElementById(selected).parentNode.id == 'A10'){
             document.getElementById(selected).className = 'pawn__White dame';
           }
-          document.getElementById(selected).style.border = "0px solid red";
+          document.getElementById(selected).style.border = "2px solid black";
           selected = false;
           lap++;
           playerLap();
@@ -220,7 +220,7 @@ function chooseCase(id, i1, i2, c1, c2){
           document.getElementById(selected).parentNode.id == 'C10' || document.getElementById(selected).parentNode.id == 'A10'){
               document.getElementById(selected).className = 'pawn__White dame';
             }
-            document.getElementById(selected).style.border = "0px solid red";
+            document.getElementById(selected).style.border = "2px solid black";
             selected = false;
             lap++;
             playerLap();
@@ -251,7 +251,7 @@ function chooseCaseBlack(id, i1, i2, c1, c2){
         document.getElementById(selected).parentNode.id == 'H1' || document.getElementById(selected).parentNode.id == 'J1'){
           document.getElementById(selected).className = 'pawn__Black dame';
           }
-          document.getElementById(selected).style.border = "0px solid red";
+          document.getElementById(selected).style.border = "2px solid black";
           selected = false;
           lap++;
           playerLap();
@@ -274,7 +274,7 @@ function chooseCaseBlack(id, i1, i2, c1, c2){
           document.getElementById(selected).parentNode.id == 'H1' || document.getElementById(selected).parentNode.id == 'J1'){
             document.getElementById(selected).className = 'pawn__Black dame';
             }
-            document.getElementById(selected).style.border = "0px solid red";
+            document.getElementById(selected).style.border = "2px solid black";
             selected = false;
             lap++;
             playerLap();
@@ -302,7 +302,7 @@ function selectedWhite(pawn) {
         document.getElementById(pawn).style.border = '2px solid red';
       }
       else{
-        document.getElementById(pawn).style.border = "0px solid red";
+        document.getElementById(pawn).style.border = "2px solid black";
       }
     }
   });
@@ -334,7 +334,7 @@ selecCase == i13 && document.getElementById(selected).parentNode.id == i13 || se
 selecCase == i16 && document.getElementById(selected).parentNode.id == i16 || selecCase == i17 && document.getElementById(selected).parentNode.id == i17){
   if(document.getElementById(id).childNodes.length <= 1){
     document.getElementById(id).appendChild(document.getElementById(selected));
-    document.getElementById(selected).style.border = "0px solid red";
+    document.getElementById(selected).style.border = "2px solid black";
     lap++;
     playerLap();
   }
@@ -350,7 +350,7 @@ selecCase == i16 && document.getElementById(selected).parentNode.id == i16 || se
         whoWin.innerHTML = 'FELICITATIONS ! VICTOIRE';
       }
       document.getElementById(letter + idEliminated).appendChild(document.getElementById(selected)); //on saute la case aprés avoir mangé le pion noir
-      document.getElementById(selected).style.border = "0px solid red";
+      document.getElementById(selected).style.border = "2px solid black";
       selected = false;
       lap++;
       playerLap();
@@ -372,7 +372,7 @@ selecCase == i13 && document.getElementById(selected).parentNode.id == i13 || se
 selecCase == i16 && document.getElementById(selected).parentNode.id == i16 || selecCase == i17 && document.getElementById(selected).parentNode.id == i17){
   if(document.getElementById(id).childNodes.length <= 1){
     document.getElementById(id).appendChild(document.getElementById(selected));
-    document.getElementById(selected).style.border = "0px solid red";
+    document.getElementById(selected).style.border = "2px solid black";
     lap++;
     playerLap();
   }
@@ -388,7 +388,7 @@ selecCase == i16 && document.getElementById(selected).parentNode.id == i16 || se
         whoWin.innerHTML = 'FELICITATIONS ! VICTOIRE';
       }
       document.getElementById(letter + idEliminated).appendChild(document.getElementById(selected)); //on saute la case aprés avoir mangé le pion noir
-      document.getElementById(selected).style.border = "0px solid red";
+      document.getElementById(selected).style.border = "2px solid black";
       selected = false;
       lap++;
       playerLap();

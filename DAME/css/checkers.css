@@ -25,7 +25,7 @@ body{
 }
 
 .black{
-  background-color: black;
+  background-color: #6c9d41;
 }
 
 .white{
@@ -57,8 +57,9 @@ body{
   position: relative;
   width: 35px;
   height: 35px;
+  border: 2px solid black;
   border-radius: 100%;
-  background-color: yellow;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -67,7 +68,7 @@ body{
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  background-color: brown;
+  background-color: black;
   cursor: pointer;
 }
 

@@ -8,6 +8,10 @@ let lap = 2;
 
 let whoLap = document.getElementById('lap');
 let whoWin = document.getElementById('win');
+let blackLap = document.getElementById('blackInfo');
+let whiteLap = document.getElementById('whiteInfo');
+let pawnBlack = document.getElementById('black-pawn');
+let pawnWhite = document.getElementById('white-pawn');
 
 
 caseSelected();

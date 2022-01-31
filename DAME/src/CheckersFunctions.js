@@ -1,9 +1,15 @@
 function playerLap(){
   if (lap%2 != 0){
-    whoLap.innerHTML = 'tour noir';
+    blackLap.style.width = "120px";
+    whiteLap.style.width = "100px";
+    pawnBlack.innerHTML = blackPawn;
+    pawnWhite.innerHTML = whitePawn;
   }
   else{
-    whoLap.innerHTML = 'tour blanc';
+    blackLap.style.width = "100px";
+    whiteLap.style.width = "120px";
+    pawnBlack.innerHTML = blackPawn;
+    pawnWhite.innerHTML = whitePawn;
   }
 }
 

@@ -17,15 +17,6 @@ function playerLap(){
   }
 }
 
-function caseSelected(){
-  if (selecCase == false){
-    console.log('aucune case selectionné');
-  }
-  else{
-    console.log("case " + selecCase + " selectionné");
-  }
-}
-
 function eliminatedWhite(id, i1){
   if(id[0] == 'C' && i1[0] == 'D'){
     return 'B';
@@ -202,7 +193,6 @@ function chooseCase(id, i1, i2, c1, c2){
 
         if(document.getElementById(id).childNodes.length <= 1){
           selecCase = id;
-          caseSelected();
           document.getElementById(id).appendChild(document.getElementById(selected));
 
           if (document.getElementById(selected).parentNode.id == 'I10' || document.getElementById(selected).parentNode.id == 'G10' || document.getElementById(selected).parentNode.id == 'E10' ||
@@ -239,7 +229,6 @@ function chooseCase(id, i1, i2, c1, c2){
     }
     }
     selecCase = id;
-    caseSelected();
 
   });
 }
@@ -255,7 +244,6 @@ function chooseCaseBlack(id, i1, i2, c1, c2){
 
         if(document.getElementById(id).childNodes.length <= 1){
           selecCase = id;
-          caseSelected();
           document.getElementById(id).appendChild(document.getElementById(selected));
           if (document.getElementById(selected).parentNode.id == 'B1' || document.getElementById(selected).parentNode.id == 'D1' || document.getElementById(selected).parentNode.id == 'F1' ||
         document.getElementById(selected).parentNode.id == 'H1' || document.getElementById(selected).parentNode.id == 'J1'){
@@ -268,13 +256,11 @@ function chooseCaseBlack(id, i1, i2, c1, c2){
         }
 
         else if (document.getElementById(id).childNodes.length > 1 && document.getElementById(id).lastChild.className ==  'pawn__White' || document.getElementById(id).lastChild.className == 'pawn__White dame') {
-          console.log('éliminé');
           let idEliminated = parseInt(id[1]) - 1;
           let letter = eliminatedBlack(id, selecCase);
           if (document.getElementById(letter + idEliminated).childNodes.length <= 1){
             document.getElementById(id).removeChild(document.getElementById(id).lastChild);
             whitePawn -= 1;
-            console.log(whitePawn);
             if (whitePawn == 0){
               whoWin.innerHTML = 'FELICITATIONS ! VICTOIRE';
             }
@@ -294,7 +280,6 @@ function chooseCaseBlack(id, i1, i2, c1, c2){
     }
     }
     selecCase = id;
-    caseSelected();
   }
   });
 }
@@ -304,7 +289,6 @@ function chooseCaseBlack(id, i1, i2, c1, c2){
 function selectedWhite(pawn) {
   document.getElementById(pawn).addEventListener("click", function(){
     if (lap%2 != 0){
-      console.log("Tour noir");
     }
     else{
       selected = pawn;
@@ -328,7 +312,6 @@ function selectedBlack(pawn) {
       document.getElementById(selected).style.border = '2px solid red';
     }
     else{
-      console.log("Tour blanc");
     }
   });
 }
@@ -349,13 +332,11 @@ selecCase == i16 && document.getElementById(selected).parentNode.id == i16 || se
     playerLap();
   }
   else if (document.getElementById(id).childNodes.length > 1 && document.getElementById(id).lastChild.className ==  'pawn__Black' || document.getElementById(id).lastChild.className == 'pawn__Black dame'){
-    console.log('éliminé');
     let idEliminated = idDame(selecCase, id);
     let letter = eliminatedDameLetter(id, selecCase);
     if (document.getElementById(letter + idEliminated).childNodes.length <= 1){
       document.getElementById(id).removeChild(document.getElementById(id).lastChild);
       blackPawn -= 1;
-      console.log(blackPawn);
       if (blackPawn == 0){
         whoWin.innerHTML = 'FELICITATIONS ! VICTOIRE';
       }
@@ -387,13 +368,11 @@ selecCase == i16 && document.getElementById(selected).parentNode.id == i16 || se
     playerLap();
   }
   else if (document.getElementById(id).childNodes.length > 1 && document.getElementById(id).lastChild.className ==  'pawn__White' || document.getElementById(id).lastChild.className == 'pawn__White dame'){
-    console.log('éliminé');
     let idEliminated = idDame(selecCase, id);
     let letter = eliminatedDameLetter(id, selecCase);
     if (document.getElementById(letter + idEliminated).childNodes.length <= 1){
       document.getElementById(id).removeChild(document.getElementById(id).lastChild);
       whitePawn -= 1;
-      console.log(whitePawn);
       if (whitePawn == 0){
         whoWin.innerHTML = 'FELICITATIONS ! VICTOIRE';
       }

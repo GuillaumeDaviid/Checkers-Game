@@ -1,13 +1,17 @@
 function playerLap(){
   if (lap%2 != 0){
     blackLap.style.width = "120px";
-    whiteLap.style.width = "100px";
+    blackLap.style.backgroundColor = "#FFC300";
+    whiteLap.style.width = "110px";
+    whiteLap.style.backgroundColor = "white";
     pawnBlack.innerHTML = blackPawn;
     pawnWhite.innerHTML = whitePawn;
   }
   else{
-    blackLap.style.width = "100px";
+    blackLap.style.width = "110px";
+    blackLap.style.backgroundColor = "white";
     whiteLap.style.width = "120px";
+    whiteLap.style.backgroundColor = "#FFC300";
     pawnBlack.innerHTML = blackPawn;
     pawnWhite.innerHTML = whitePawn;
   }

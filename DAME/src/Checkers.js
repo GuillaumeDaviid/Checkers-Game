@@ -13,8 +13,6 @@ let whiteLap = document.getElementById('whiteInfo');
 let pawnBlack = document.getElementById('black-pawn');
 let pawnWhite = document.getElementById('white-pawn');
 
-
-caseSelected();
 playerLap();
 
 

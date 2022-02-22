@@ -210,7 +210,6 @@ function chooseCase(id, i1, i2, c1, c2){
           if (document.getElementById(letter + idEliminated).childNodes.length <= 1){
             document.getElementById(id).removeChild(document.getElementById(id).lastChild);
             blackPawn -= 1;
-            console.log(blackPawn);
             if (blackPawn == 0){
               whoWin.innerHTML = 'FELICITATIONS ! VICTOIRE';
             }
@@ -276,7 +275,6 @@ function chooseCaseBlack(id, i1, i2, c1, c2){
             playerLap();
           }
       }
-
     }
     }
     selecCase = id;
@@ -292,12 +290,12 @@ function selectedWhite(pawn) {
     }
     else{
       selected = pawn;
-      if (selected){
-        document.getElementById(pawn).style.border = '2px solid red';
+    }
+    if (selected){
+      for(let i = 0 ; i < document.getElementsByClassName('pawn__White').length ; i++ ){
+        document.getElementsByClassName('pawn__White')[i].style.border = "2px solid black";
       }
-      else{
-        document.getElementById(pawn).style.border = "2px solid black";
-      }
+      document.getElementById(selected).style.border = '2px solid red';
     }
   });
 }
@@ -309,9 +307,12 @@ function selectedBlack(pawn) {
   document.getElementById(pawn).addEventListener("click", function(){
     if (lap%2 != 0){
       selected = pawn;
-      document.getElementById(selected).style.border = '2px solid red';
-    }
-    else{
+      if (selected){
+        for(let i = 0 ; i < document.getElementsByClassName('pawn__White').length ; i++ ){
+          document.getElementsByClassName('pawn__Black')[i].style.border = "2px solid black";
+        }
+        document.getElementById(selected).style.border = '2px solid red';
+      }
     }
   });
 }
